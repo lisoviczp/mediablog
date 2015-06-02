@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vibeType: MyString
+  title: MyString
+  body: MyText
+  url: MyString
+  approved: false
+
+two:
+  vibeType: MyString
+  title: MyString
+  body: MyText
+  url: MyString
+  approved: false

@@ -1,0 +1,14 @@
+
+
+<div class="mainForm">
+	<%= form_for(@vibe) do |f| %>
+
+	Type: <%= f.select :vibeType, [['image', 1], ['soundcloud', 2], ['youtube', 3]] %>
+		Title: <%= f.text_field :title %>
+		Body: <%= f.text_field :body %>
+		URL: <%= f.text_field :url %>
+
+		<%= f.submit "submit" %>
+
+	<% end %>
+</div>

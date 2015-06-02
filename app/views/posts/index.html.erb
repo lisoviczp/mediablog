@@ -1,0 +1,49 @@
+
+
+
+<div class="mainForm">
+
+
+<h1 id="header-button"><%= link_to "submit", new_post_path %> </h1>
+
+	<div id="container" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 320 }'>
+	
+		<% @post.each do |post| %>
+			<div class="item"> 
+				<iframe id="what" width="100%" height="150" scrolling="no" frameborder="no" src="<%= post.getSrc.to_s %>" ></iframe> 
+			</div>
+		<% end %>
+		<div class="item"><img src="/assets/rolf.jpg"></div>
+		<div class="item"><img src="/assets/braislakeitaly.jpg"></div>
+		<div class="item"><img src="/assets/chilevolcano.jpg"></div>
+		<div class="item"><img src="/assets/coolhaus.jpg"></div>
+		<div class="item"><iframe src="https://www.youtube.com/embed/lCDKk2s0pQM" frameborder="0" allowfullscreen></iframe></div>
+		<div class="item"><img src="/assets/fireflies.jpg"></div>
+		<div class="item"><img src="/assets/nice.jpg"></div>
+		<div class="item"><iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202830372&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
+		<div class="item"><img src="/assets/norway.jpg"></div>
+		<div class="item"><img src="/assets/orca.jpg"></div>
+		<div class="item"><img src="/assets/redpanda.jpg"></div>
+		<div class="item"><img src="/assets/rhino.jpg"></div>
+		<div class="item"><img src="/assets/suncave.jpg"></div>
+		<div class="item"><img src="/assets/sunrise.jpg"></div>
+		<div class="item"><img src="/assets/tetonrange.jpg"></div>
+	</div>
+
+</div>
+
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery.masonry.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js"></script>
+<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+<script>
+$(document).ready(function() {
+	var container = document.querySelector('#container');
+	var msnry;
+	// initialize Masonry after all images have loaded
+	imagesLoaded( container, function() {
+	  msnry = new Masonry( container );
+	});
+
+});
+</script>
